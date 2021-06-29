@@ -12,7 +12,13 @@
 	<script type="text/javascript" src="tab.js"></script>
 	<title>担当者通知システム</title>
 	<link rel="stylesheet" href="style.css">
+	<?php
+    if($_SERVER['REQUEST_METHOD']) {
+        
+    }
+    ?>
 </head>
+
 <body>
 	<div id="wrapper">
 		<div id="header"><span>ログインページ</span></div>
@@ -26,23 +32,25 @@
 				<div id="box1">
 					<div class="text1">
 					<span>学年・クラス</span>
-						<select name="grade">
-							<option value="1年生" selected>1年生</option>
-							<option value="2年生">2年生</option>
-							<option value="3年生">3年生</option>
-							<option value="4年生">4年生</option>
-							<option value="5年生">5年生</option>
-						</select>
-						<select name="class">
-							<option value="CN" selected>CN</option>
-							<option value="ES">ES</option>
-							<option value="IT">IT</option>
-						</select><br>
-						<span>出席番号</span>
-						<input type="text" name="number" style="width: 140px;"></p>
-						<span>パスワード</span>
-						<input type="text" name="password" style="width: 140px;"></p>
-						<input type="button" id="rogin_button" onclick="location.href='./index_teacher.php'" value="ログイン">
+						<form action="./index_student.php" method="post" name="profile">
+							<select name="grade">
+								<option name="grade" value="1" selected>1年生</option>
+								<option name="grade" value="2">2年生</option>
+								<option name="grade" value="3">3年生</option>
+								<option name="grade" value="4">4年生</option>
+								<option name="grade" value="5">5年生</option>
+							</select>
+							<select name="class">
+								<option name="class" value="CN" selected>CN</option>
+								<option name="class" value="ES">ES</option>
+								<option name="class" value="IT">IT</option>
+							</select><br>
+							<span>出席番号</span>
+							<input type="text" name="number" style="width: 140px;"></p>
+							<!-- <span>パスワード</span>
+							<input type="text" name="password" style="width: 140px;"></p> -->
+							<input type="submit" id="rogin_button" formaction="index_student.php" value="ログイン">
+						</form>
 					</div>
 				</div>
 
@@ -54,21 +62,23 @@
 				<div id="box2">
 					<div class="text2">
 						<span>学年・クラス</span>
-						<select name="grade">
-							<option value="1年生" selected>1年生</option>
-							<option value="2年生">2年生</option>
-							<option value="3年生">3年生</option>
-							<option value="4年生">4年生</option>
-							<option value="5年生">5年生</option>
-						</select>
-						<select name="class">
-							<option value="CN" selected>CN</option>
-							<option value="ES">ES</option>
-							<option value="IT">IT</option>
-						</select><br>
-						<span>パスワード</span>
-						<input type="text" name="password" style="width: 140px;"></p>
-						<input type="button" id="rogin_button" onclick="location.href='./index_teacher.php'" value="ログイン">
+						<form action="./index_teacher.php" method="post" name="profile">
+							<select name="grade">
+								<option name="grade" value="1" selected>1年生</option>
+								<option name="grade" value="2">2年生</option>
+								<option name="grade" value="3">3年生</option>
+								<option name="grade" value="4">4年生</option>
+								<option name="grade" value="5">5年生</option>
+							</select>
+							<select name="class">
+								<option name="class" value="CN" selected>CN</option>
+								<option name="class" value="ES">ES</option>
+								<option name="class" value="IT">IT</option>
+							</select><br>
+							<!-- <span>パスワード</span>
+							<input type="text" name="password" style="width: 140px;"></p> -->
+							<input type="submit" id="rogin_button" formaction="index_teacher.php" value="ログイン">
+						</form>
 					</div>
 				</div>
 			</div>
