@@ -9,6 +9,24 @@
 	<title>担当者通知システム</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
+<?php
+    // $grade 学年
+    if (isset($_POST['grade'])) {
+        $grade = $_POST['grade'];
+		// echo $grade;
+    } else {
+
+    }
+	// $class クラス
+	if (isset($_POST['class'])) {
+        $class = $_POST['class'];
+		// echo $class;
+    } else {
+
+    }
+?>
+
 <body>
 	<div id="wrapper">
 		<div id="header"><span>担任用メインページ</span></div>
